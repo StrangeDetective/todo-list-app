@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+
     font-family: sans-serif;
+    background-color: rgb(232, 204, 255);
 }
 
 #main-header {
@@ -45,5 +47,137 @@ body {
     padding: 17px 20px 17px 20px;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
+}
 
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.stats span {
+    color: rgb(231, 231, 231);
+    background-color: rgb(25, 4, 27);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#remaining-tasks, #completed-tasks, #total-tasks {
+    background-color: rgb(233, 200, 17);
+    color: black;
+    font-weight: bold;
+}
+
+.stats li {
+    list-style: none;
+    display: flex;
+
+}
+
+.todos {
+    margin-bottom: 4rem;
+}
+
+.todos li {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+ul.todos, ul.stats {
+    padding: 0;
+    margin: 20px;
+}
+
+
+.todos li div {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.todos li.completed {
+    background-color: rgb(171, 154, 185);
+    text-decoration: line-through;
+    color: rgb(49, 49, 49);
+}
+
+input[type=checkbox]{
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid rgb(41, 29, 41);
+    border-radius: 100%;
+    display: grid;
+    place-content: center;    
+    transition: all 0.3s ease-in-out;
+}
+
+input[type=checkbox]:before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2568 19.3364C10.6138 19.3364 10.896 19.1787 11.0952 18.8716L18.9395 6.52002C19.0889 6.2793 19.147 6.09668 19.147 5.90576C19.147 5.44922 18.8481 5.15039 18.3916 5.15039C18.0596 5.15039 17.877 5.2583 17.6777 5.57373L10.2236 17.4521L6.35547 12.3887C6.14795 12.0981 5.94043 11.9819 5.6416 11.9819C5.16846 11.9819 4.84473 12.3057 4.84473 12.7622C4.84473 12.9531 4.92773 13.1689 5.08545 13.3682L9.39355 18.855C9.64258 19.1787 9.8999 19.3364 10.2568 19.3364Z" fill="white"/></svg>');
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+    
+}
+input[type=checkbox]:checked {
+background-color:rgb(49, 49, 49); 
+}
+
+input[type=checkbox]:checked:before {
+transform: scale(1);
+}
+
+.todos li button {
+    padding: .25rem;
+    border: 0;
+    display: grid;
+    place-content: center;
+background-color: transparent;
+}
+
+.todos li button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.todos li button svg path {
+    transition: all 0.3s ease-in-out;
+}
+
+.todos li button:hover svg path {
+    fill: rgb(78, 78, 78);
+}
+
+.todos li button:active svg {
+    transform: scale(.7);}
+
+.todos li span{
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.todos li span:focus {
+    background-color: rgb(232, 204, 255);
+    outline: none;
+}
+
+.todos li span[contenteditable]:hover {
+    background-color: rgb(232, 204, 255);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
 }
