@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: rgb(25, 4, 27);
+}
+
+.container h1 {
+    color: rgb(231, 231, 231);
+    font-size: 40px;
+    display: flex;
+    justify-content: left;
+}
+
+#todo-form {
+    color: rgb(231, 231, 231);
+    /*border: 2px solid red;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+}
+
+#input-task {
+    background-color: rgba(46, 24, 48, 0.527);
+    font-size: 20px;
+    color: rgb(231, 231, 231);
+    padding: 15px 75px 15px 75px;
+    border-radius: 20px;
+    border: none;
+}
+
+#submit-btn {
+    background-color: rgb(233, 200, 17);
+    color: rgb(25, 4, 27);
+    padding: 17px 20px 17px 20px;
+    border: none;
+    border-radius: 20px;
+
+}
